@@ -10,10 +10,10 @@ server.use(helmet());
 server.use(express.json());
 server.use(cors());
 server.use("/api/users", usersRouter);
-server.use("/api/users/lists", usersRouter, listsRouter);
+server.use("/api/users/lists", listsRouter);
 
 server.get("/", (req, res) => {
-  res.send("Server is up and running :)");
+  res.send("Server is up and running! :)");
 });
 
 module.exports = server;
