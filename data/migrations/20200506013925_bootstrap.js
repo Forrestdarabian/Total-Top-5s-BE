@@ -9,9 +9,15 @@ exports.up = function (knex) {
       tbl.increments();
       tbl.string("category", 255).notNullable();
       tbl.string("subcategory", 255).notNullable();
-
+      tbl.string("nameFive", 255).notNullable();
+      tbl.string("descriptionFive").notNullable();
+      tbl.string("nameFour", 255).notNullable();
+      tbl.string("descriptionFour").notNullable();
+      tbl.string("nameThree", 255).notNullable();
+      tbl.string("descriptionThree").notNullable();
+      tbl.string("nameTwo", 255).notNullable();
+      tbl.string("descriptionTwo").notNullable();
       tbl.string("name", 255).notNullable();
-
       tbl.string("description").notNullable();
     });
 };

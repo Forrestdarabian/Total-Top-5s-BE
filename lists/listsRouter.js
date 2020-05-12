@@ -40,7 +40,20 @@ router.get("/:id", (req, res) => {
 
 //POST Request
 router.post("/", (req, res) => {
-  const { category, subcategory, name, description } = req.body;
+  const {
+    category,
+    subcategory,
+    nameFive,
+    descriptionFive,
+    nameFour,
+    descriptionFour,
+    nameThree,
+    descriptionThree,
+    nameTwo,
+    descriptionTwo,
+    name,
+    description,
+  } = req.body;
   Lists.insert(req.body)
     .then((item) => {
       if (item) {
@@ -62,8 +75,34 @@ router.post("/", (req, res) => {
 //PUT Request
 router.put("/:id", (req, res) => {
   const { id } = req.params;
-  const { category, subcategory, name, description } = req.body;
-  if (category && subcategory && name && description) {
+  const {
+    category,
+    subcategory,
+    nameFive,
+    descriptionFive,
+    nameFour,
+    descriptionFour,
+    nameThree,
+    descriptionThree,
+    nameTwo,
+    descriptionTwo,
+    name,
+    description,
+  } = req.body;
+  if (
+    category &&
+    subcategory &&
+    nameFive &&
+    descriptionFive &&
+    nameFour &&
+    descriptionFour &&
+    nameThree &&
+    descriptionThree &&
+    nameTwo &&
+    descriptionTwo &&
+    name &&
+    description
+  ) {
     Lists.update(id, req.body)
       .then((updateditem) => {
         if (updateditem) {
