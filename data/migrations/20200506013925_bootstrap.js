@@ -19,6 +19,7 @@ exports.up = function (knex) {
       tbl.string("descriptionTwo").notNullable();
       tbl.string("name", 255).notNullable();
       tbl.string("description").notNullable();
+      tbl.string("username").notNullable();
     });
 };
 

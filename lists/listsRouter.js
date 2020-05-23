@@ -53,6 +53,7 @@ router.post("/", (req, res) => {
     descriptionTwo,
     name,
     description,
+    username,
   } = req.body;
   Lists.insert(req.body)
     .then((item) => {
@@ -88,6 +89,7 @@ router.put("/:id", (req, res) => {
     descriptionTwo,
     name,
     description,
+    username,
   } = req.body;
   if (
     category &&
@@ -101,7 +103,8 @@ router.put("/:id", (req, res) => {
     nameTwo &&
     descriptionTwo &&
     name &&
-    description
+    description &&
+    username
   ) {
     Lists.update(id, req.body)
       .then((updateditem) => {
